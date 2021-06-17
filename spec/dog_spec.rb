@@ -57,7 +57,7 @@ describe "Dog" do
   describe "#save" do
     it 'returns an instance of the dog class' do
       dog = teddy.save
-
+      # binding.pry
       expect(dog).to be_instance_of(Dog)
     end
 
@@ -146,6 +146,7 @@ describe "Dog" do
       teddy.save
       teddy.name = "Teddy Jr."
       teddy.update
+      # binding.pry
       teddy_jr = Dog.find_by_name("Teddy Jr.")
       expect(teddy_jr.id).to eq(teddy.id)
     end
